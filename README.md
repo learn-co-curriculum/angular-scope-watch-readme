@@ -63,7 +63,7 @@ angular
 	.controller('SomeController', SomeController);
 ```
 
-This will then fire out whenever we change any item in that object! However, this doesn't work that well when we change a value inside an object inside an object.
+This will then fire out whenever we change any item in that object! However, this doesn't work that well when we change a value inside an object inside an object. For instance, if we have an object with the variable `user` and update the `name` property inside it from `Bob` to `Alice`, we will get notified. Same as if we removed the property, or added a new one. However, we don't get the same level of checks on deep nested objects.
 
 ## Deep-watching objects/arrays
 
@@ -93,3 +93,7 @@ angular
 ```
 
 Before, with `$scope.$watchCollection`, if we had updated the country's name, we wouldn't have got a callback fired. However, with `$scope.$watch`, we do! Just be careful - this requires more resources to check the object, so use them only when you must.
+
+Angular doesn't deep watch by default as it is more intensive and requires more computation time in order to find differences. If it did do it by default, our digest cycle will be a lot slower!
+
+Be careful using these functions - they mean that extra checks are added to the digest cycle (on top of the ones automatically created by Angular), meaning that every time it is ran, it takes even longer.
