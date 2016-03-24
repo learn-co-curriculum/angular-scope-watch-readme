@@ -40,7 +40,7 @@ When a user types into our input, our function will get called with it's old val
 
 ## Watching objects/arrays
 
-We've looked at observing strings, now let's watch objects/arrays. We can do this with ``$scope.$watchCollection`
+We've looked at observing strings, now let's watch objects/arrays. We can do this with `$scope.$watchCollection`
 
 
 ```js
