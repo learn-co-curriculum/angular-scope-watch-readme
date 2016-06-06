@@ -36,7 +36,7 @@ angular
 <input ng-model="ctrl.search" />
 ```
 
-When a user types into our input, our function will get called with it's old value and it's new value. For instance, if we typed the letter `r` into our input, it would get called with `oldValue` equal to `''` and `newValue` equal to `'r'`.
+When a user types into our input, our function will get called with its old value and its new value. For instance, if we typed the letter `r` into our input, it would get called with `oldValue` equal to `''` and `newValue` equal to `'r'`.
 
 ## Watching objects/arrays
 
@@ -97,3 +97,5 @@ Before, with `$scope.$watchCollection`, if we had updated the country's name, we
 Angular doesn't deep watch by default as it is more intensive and requires more computation time in order to find differences. If it did do it by default, our digest cycle will be a lot slower!
 
 Be careful using these functions - they mean that extra checks are added to the digest cycle (on top of the ones automatically created by Angular), meaning that every time it is ran, it takes even longer.
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/angular-scope-watch-readme'>Angular Scope Watch</a> on Learn.co and start learning to code for free.</p>
